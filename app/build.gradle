@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    namespace 'az.fex.fexcargo'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "az.fex.fexcargo"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    kapt {
+        useBuildCache = true
+    }
+}
+
+dependencies {
+    api project(path: ':core')
+    implementation project(path: ':i18n')
+    implementation project(path: ':common')
+    implementation project(path: ':fexcargo')
+    apiJetbrains(dependencies)
+    apiAndroidx(dependencies)
+    apiLifecycle(dependencies)
+    apiGithub(dependencies)
+    apiGoogle(dependencies)
+}

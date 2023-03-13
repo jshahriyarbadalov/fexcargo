@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_make_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                app:cardCornerRadius="@dimen/item_margin_10"
+                app:cardElevation="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/item_margin_16"
+                    android:layout_marginTop="@dimen/item_margin_20"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center"
+                    android:text="@string/title_make_order"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/item_margin_16"
+                    android:layout_marginTop="@dimen/item_margin_52"
+                    android:layout_marginBottom="@dimen/item_margin_20"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center"
+                    android:text="@string/desc_make_order"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/lbl_text_16" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_pack_deliver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                app:cardCornerRadius="@dimen/item_margin_10"
+                app:cardElevation="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_make_order">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/item_margin_16"
+                    android:layout_marginTop="@dimen/item_margin_20"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center"
+                    android:text="@string/title_package_delivery"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/item_margin_16"
+                    android:layout_marginTop="@dimen/item_margin_52"
+                    android:layout_marginBottom="@dimen/item_margin_20"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center"
+                    android:text="@string/desc_package_delivery"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/lbl_text_16" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                app:cardCornerRadius="@dimen/item_margin_10"
+                app:cardElevation="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_pack_deliver">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/item_margin_16"
+                    android:layout_marginTop="@dimen/item_margin_20"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center"
+                    android:text="@string/title_order_service"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/item_margin_16"
+                    android:layout_marginTop="@dimen/item_margin_52"
+                    android:layout_marginBottom="@dimen/item_margin_20"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center"
+                    android:text="@string/desc_order_service"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/lbl_text_16" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

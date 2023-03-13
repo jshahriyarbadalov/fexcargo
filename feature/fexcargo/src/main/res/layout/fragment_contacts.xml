@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/lbl_contact_info"
+                android:textColor="@color/black"
+                android:textSize="@dimen/header_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <include
+                android:id="@+id/phone_info"
+                layout="@layout/item_contact_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_margin_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_contact" />
+
+            <include
+                android:id="@+id/mail_info"
+                layout="@layout/item_contact_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_margin_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phone_info" />
+
+            <include
+                android:id="@+id/address_info"
+                layout="@layout/item_contact_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_margin_8"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mail_info" />
+
+
+            <include
+                android:id="@+id/work_day_info"
+                layout="@layout/item_contact_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_margin_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address_info" />
+
+            <include
+                android:id="@+id/work_hour_info"
+                layout="@layout/item_contact_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_margin_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/work_day_info" />
+
+            <TextView
+                android:id="@+id/sub_title_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_24"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/lbl_any_question"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sub_header_title"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/work_hour_info" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inl_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_8"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sub_title_contact">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="@string/full_name"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inl_phone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_8"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inl_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="@string/lbl_mobile"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inl_email"
+                android:layout_width="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_8"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeWidthFocused="2dp"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inl_phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="@string/email"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inl_description"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_8"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeWidth="1dp"
+                android:minHeight="250dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inl_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:minHeight="250dp"
+                    android:fontFamily="@font/aldrich"
+                    app:textInputLayoutFocusedRectEnabled="false"
+                    android:hint="@string/description"
+                    android:inputType="textMultiLine"
+                    android:maxLength="500"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:gravity="top"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mb_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:background="@drawable/white_gradient"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:drawableTint="@color/primaryColor"
+                android:fontFamily="@font/aldrich"
+                android:padding="@dimen/item_padding_24"
+                android:layout_marginTop="@dimen/item_margin_32"
+                android:text="@string/send_info"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_title"
+                app:layout_constraintTop_toBottomOf="@id/inl_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="@dimen/item_margin_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo"
+                tools:ignore="contentDescription"/>
+
+            <TextView
+                android:id="@+id/tv_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_32"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/sign_up"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/header_title"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inl_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sub_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_check"
+                    android:drawablePadding="@dimen/item_small_margin_4"
+                    android:fontFamily="@font/aldrich"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:hint="@string/lbl_name"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inl_surname"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_small_margin_4"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inl_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_surname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_check"
+                    android:drawablePadding="@dimen/item_small_margin_4"
+                    android:fontFamily="@font/aldrich"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:hint="@string/lbl_surname"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_small_margin_4"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inl_surname">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_check"
+                    android:fontFamily="@font/aldrich"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:hint="@string/email"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inl_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_small_margin_4"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconDrawable="@drawable/view"
+                app:endIconMode="password_toggle"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/item_small_margin_4"
+                    android:fontFamily="@font/aldrich"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inl_check_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_small_margin_4"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconDrawable="@drawable/view"
+                app:endIconMode="password_toggle"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inl_password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_check_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/item_small_margin_4"
+                    android:fontFamily="@font/aldrich"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:hint="@string/check_password"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inl_phone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_small_margin_4"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inl_check_password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_check"
+                    android:drawablePadding="@dimen/item_small_margin_4"
+                    android:fontFamily="@font/aldrich"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:hint="@string/lbl_mobile"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inl_address"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_small_margin_4"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inl_phone"
+                app:prefixText="@string/lbl_address"
+                app:prefixTextAppearance="@style/PrefixTextView"
+                app:prefixTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_check"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:drawablePadding="@dimen/item_small_margin_4"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="@string/lbl_address"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inl_birthday"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_small_margin_4"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inl_address"
+                app:prefixText="@string/lbl_birthday"
+                app:prefixTextAppearance="@style/PrefixTextView"
+                app:prefixTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_calendar_month"
+                    android:drawablePadding="@dimen/item_small_margin_4"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="@string/lbl_birthday"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_small_margin_4"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inl_birthday">
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/item_small_margin_4"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/bg_btn_square"
+                    android:fontFamily="@font/aldrich"
+                    android:paddingVertical="@dimen/item_margin_16"
+                    android:text="@string/lbl_male"
+                    android:textColor="@color/gray3"
+                    android:textSize="@dimen/lbl_text_16" />
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/bg_btn_square"
+                    android:fontFamily="@font/aldrich"
+                    android:paddingVertical="@dimen/item_margin_16"
+                    android:text="@string/lbl_female"
+                    android:textColor="@color/gray3"
+                    android:textSize="@dimen/lbl_text_16" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_list_series"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:background="@drawable/bg_btn_square"
+                android:drawableEnd="@drawable/ic_arrow_drop_down"
+                android:drawablePadding="@dimen/item_small_margin_4"
+                android:paddingHorizontal="@dimen/item_margin_16"
+                android:paddingVertical="@dimen/item_margin_16"
+                android:textSize="@dimen/sub_header_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg_gender"
+                tools:text="AZE" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inl_id_number"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginStart="@dimen/item_small_margin_4"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_list_series"
+                app:layout_constraintTop_toTopOf="@+id/tv_list_series"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_id_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/item_small_margin_4"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="@string/lbl_fin_code"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/inl_fin_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_small_margin_4"
+                android:background="@color/transparent"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeErrorColor="@color/red"
+                android:textColorHint="@color/gray3"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:expandedHintEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_list_series"
+                app:prefixText="@string/lbl_fin_code"
+                app:prefixTextAppearance="@style/PrefixTextView"
+                app:prefixTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_fin_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/primaryColor"
+                    android:drawableEnd="@drawable/ic_info"
+                    android:drawablePadding="@dimen/item_small_margin_4"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="@string/lbl_fin_code"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_list_branches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:background="@drawable/bg_btn_square"
+                android:drawableEnd="@drawable/ic_arrow_drop_down"
+                android:drawablePadding="@dimen/item_small_margin_4"
+                android:paddingHorizontal="@dimen/item_margin_16"
+                android:paddingVertical="@dimen/item_margin_16"
+                android:text="@string/lbl_branch"
+                android:textSize="@dimen/sub_header_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inl_fin_code" />
+
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_12"
+                android:buttonTint="@color/primaryColor"
+                android:text="@string/lbl_condition_terms"
+                android:textSize="@dimen/toolbar_title_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_list_branches" />
+
+            <TextView
+                android:id="@+id/tv_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item_margin_8"
+                android:paddingVertical="@dimen/item_small_margin_4"
+                android:text="@string/condition_terms_read"
+                android:textColor="@color/blue_light_0B"
+                android:textSize="@dimen/toolbar_title_text_size"
+                app:layout_constraintStart_toEndOf="@+id/cb_terms"
+                app:layout_constraintTop_toTopOf="@+id/cb_terms" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mb_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_32"
+                android:background="@drawable/bg_btn_gradient"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:drawableTint="@color/white"
+                android:padding="@dimen/item_padding_24"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_terms" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

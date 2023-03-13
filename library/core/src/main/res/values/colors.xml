@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="card_background">#2C3243</color>
+    <color name="colorAlmond">#ffde4d</color>
+    <color name="primaryColor">#F9CD00</color>
+    <color name="secondaryColor">#FEFF00</color>
+    <color name="gray_e5">#E5E5E5</color>
+    <color name="gray_f5">#f5f5f5</color>
+    <color name="gray_ce">#cecece</color>
+    <color name="gray_c3">#989FAE</color>
+    <color name="darker_gray">#808080</color>
+    <color name="gray_f7">#F7F8F8</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="divider_color">#269496AC</color>
+    <color name="gray3">#9496AC</color>
+    <color name="blue_light">#1433FF</color>
+    <color name="blue_light_0B">#0B6EFD</color>
+    <color name="red_light">#F3312C</color>
+    <color name="red">#ff0000</color>
+</resources>

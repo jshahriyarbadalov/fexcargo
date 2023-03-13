@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_sub_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/tv_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_margin_32"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/sign_in"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/header_title"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/input_layout"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_small_margin_4"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="1dp"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_check"
+                app:endIconCheckable="true"
+                app:boxStrokeWidthFocused="2dp"
+                app:expandedHintEnabled="true"
+                app:layout_constraintBottom_toTopOf="@+id/inl_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="@string/email"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inl_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginTop="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_margin_8"
+                android:background="@color/transparent"
+                android:textColorHint="@color/gray3"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeColor="@color/primaryColor"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="password_toggle"
+                app:expandedHintEnabled="true"
+                app:layout_constraintBottom_toTopOf="@+id/tv_forget_pass"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/value_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:textSize="@dimen/lbl_text_16"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="@string/password"
+                    android:textColorHint="@color/gray3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_forget_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_margin_72"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/forgotten_pass"
+                android:textColor="@color/blue_light"
+                android:textSize="@dimen/toolbar_title_text_size"
+                app:layout_constraintBottom_toTopOf="@+id/mb_sign_in"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mb_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginHorizontal="@dimen/item_margin_16"
+                android:layout_marginBottom="@dimen/item_margin_32"
+                android:background="@drawable/bg_btn_gradient"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:drawableTint="@color/white"
+                android:padding="@dimen/item_padding_24"
+                android:text="@string/sign_in"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    namespace 'az.fex.common'
+    compileSdk versions.COMPILE_ANDROID_SDK
+
+    defaultConfig {
+        minSdk versions.MIN_ANDROID_SDK
+        targetSdk versions.TARGET_ANDROID_SDK
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues = true
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    kapt {
+        useBuildCache = true
+    }
+}
+
+dependencies {
+    apiJetbrains(dependencies)
+    apiAndroidx(dependencies)
+    apiLifecycle(dependencies)
+    apiGithub(dependencies)
+    apiGoogle(dependencies)
+    implementation project(":core")
+    implementation project(":i18n")
+}

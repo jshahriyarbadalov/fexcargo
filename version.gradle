@@ -1,0 +1,246 @@
+def versions = [
+        MIN_ANDROID_SDK    : 24,
+        COMPILE_ANDROID_SDK: 33,
+        TARGET_ANDROID_SDK : 33,
+        ANDROIDX           : [
+                CORE               : "1.7.0",
+                APPCOMPAT          : "1.4.1",
+                CONSTRAINTLAYOUT   : "2.1.3",
+                RECYCLERVIEW       : "1.2.1",
+                SWIPEREFRESHLAYOUT : "1.1.0",
+                FRAGMENT           : "1.4.1",
+                NAVIGATION_UI      : "2.4.1",
+                NAVIGATION_FRAGMENT: "2.4.1",
+                ARCH_CORE          : "2.1.0",
+                TEST_CORE          : "1.4.0",
+                WORK_RUNTIME       : "2.7.1",
+        ],
+        ANDROIDXLIFECYCLE  : [
+                EXTENSIONS: "2.2.0",
+                VIEWMODEL : "2.4.1",
+                PROCESS   : "2.4.1",
+                SERVICE   : "2.4.1",
+
+                TEST_CORE : "1.4.0"
+        ],
+        JETBRAINS          : [
+                KOTLIN    : "1.6.10",
+                COROUTINES: "1.5.2",
+                COIL      : "2.0.0-rc02"
+        ],
+        GOOGLE             : [
+                MATERIAL      : "1.6.1",
+                OSS           : "17.0.0",
+                GSON          : "2.9.0",
+                TRUTH         : "1.1.3",
+                BROWSER       : "1.4.0",
+                BROWSER_HELPER: "2.3.0",
+                GLIDE         : "4.11.0"
+        ],
+        GITHUB             : [
+                ANIMATEDBOTTOMBAR: "1.1.0",
+                TIMBER           : "5.0.1",
+                ROOM             : "2.4.0-beta01"
+        ],
+        FACEBOOK           : "0.5.0",
+        LOTTIE             : "3.4.0",
+        KOIN               : [
+                CORE   : "3.1.2",
+                TEST   : "3.1.2",
+                ANDROID: "3.1.2",
+        ],
+        HILT               : [
+                HILT: "2.40"
+        ],
+        SQUAREUP           : [
+                RETROFIT      : "2.9.0",
+                CONVERTER_GSON: "2.9.0",
+                INTERCEPTOR   : "5.0.0-alpha.5"
+        ],
+        ROBOELECTRIC       : "4.4",
+        MOCKK              : "1.12.3",
+        TURBINE            : "0.5.2",
+        JUNIT              : "4.13.2",
+        EXT_JUNIT          : "1.1.3",
+        ESPRESSO_CORE      : "3.4.0",
+        JAVAX_INJECT       : "1",
+        GRADLE_DEPS        : [
+                NAVIGATION_ARGS: "2.3.5",
+                OSS            : "0.10.5"
+
+        ]
+]
+ext.versions = versions
+
+def deps = [
+        jetbrains_kotlin_stdlib      : "org.jetbrains.kotlin:kotlin-stdlib:${versions.JETBRAINS.KOTLIN}",
+
+        androidx_core_ktx            : "androidx.core:core-ktx:${versions.ANDROIDX.CORE}",
+        androidx_appcompat           : "androidx.appcompat:appcompat:${versions.ANDROIDX.APPCOMPAT}",
+        androidx_constraintlayout    : "androidx.constraintlayout:constraintlayout:${versions.ANDROIDX.CONSTRAINTLAYOUT}",
+        androidx_recyclerview        : "androidx.recyclerview:recyclerview:${versions.ANDROIDX.RECYCLERVIEW}",
+        androidx_swiperefreshlayout  : "androidx.swiperefreshlayout:swiperefreshlayout:${versions.ANDROIDX.SWIPEREFRESHLAYOUT}",
+        androidx_fragment            : "androidx.fragment:fragment-ktx:${versions.ANDROIDX.FRAGMENT}",
+        androidx_nav_fragment        : "androidx.navigation:navigation-fragment-ktx:${versions.ANDROIDX.NAVIGATION_FRAGMENT}",
+        androidx_nav_ui              : "androidx.navigation:navigation-ui-ktx:${versions.ANDROIDX.NAVIGATION_UI}",
+        androidx_work_runtime        : "androidx.work:work-runtime:${versions.ANDROIDX.WORK_RUNTIME}",
+        androidx_work_runtime_ktx    : "androidx.work:work-runtime-ktx:${versions.ANDROIDX.WORK_RUNTIME}",
+
+        androidx_lifecycle_extensions: "androidx.lifecycle:lifecycle-extensions:${versions.ANDROIDXLIFECYCLE.EXTENSIONS}",
+        androidx_lifecycle_viewmodel : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.ANDROIDXLIFECYCLE.VIEWMODEL}",
+        androidx_lifecycle_process   : "androidx.lifecycle:lifecycle-process:${versions.ANDROIDXLIFECYCLE.PROCESS}",
+        androidx_lifecycle_service   : "androidx.lifecycle:lifecycle-service:${versions.ANDROIDXLIFECYCLE.SERVICE}",
+
+        google_material              : "com.google.android.material:material:${versions.GOOGLE.MATERIAL}",
+        google_oss                   : "com.google.android.gms:play-services-oss-licenses:${versions.GOOGLE.OSS}",
+        google_gson                  : "com.google.code.gson:gson:${versions.GOOGLE.GSON}",
+        google_test_truth            : "com.google.truth:truth:${versions.GOOGLE.TRUTH}",
+        google_browser               : "androidx.browser:browser:${versions.GOOGLE.BROWSER}",
+        google_guava                 : "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+        google_browser_helper        : "com.google.androidbrowserhelper:androidbrowserhelper:${versions.GOOGLE.BROWSER_HELPER}",
+        google_glide                 : "com.github.bumptech.glide:glide:${versions.GOOGLE.GLIDE}",
+        google_glide_okhttp          : "com.github.bumptech.glide:okhttp3-integration:${versions.GOOGLE.GLIDE}",
+        google_glide_compiler        : "com.github.bumptech.glide:compiler:${versions.GOOGLE.GLIDE}",
+        google_guava : "com.google.guava:guava:29.0-android",
+
+        jetbrains_coroutines         : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.JETBRAINS.COROUTINES}",
+        jetbrains_coil               : "io.coil-kt:coil:${versions.JETBRAINS.COIL}",
+
+        github_animatedbottombar     : "nl.joery.animatedbottombar:libraryx:${versions.GITHUB.ANIMATEDBOTTOMBAR}",
+        github_timber                : "com.jakewharton.timber:timber:${versions.GITHUB.TIMBER}",
+        room_runtime                 : "androidx.room:room-runtime:${versions.GITHUB.ROOM}",
+        room_compiler                : "androidx.room:room-compiler:${versions.GITHUB.ROOM}",
+        room_ktx                     : "androidx.room:room-ktx:${versions.GITHUB.ROOM}",
+
+        facebook_shimmer             : "com.facebook.shimmer:shimmer:${versions.FACEBOOK}",
+
+        airbnb_lottie                : "com.airbnb.android:lottie:${versions.LOTTIE}",
+
+        koin_core                    : "io.insert-koin:koin-core:${versions.KOIN.CORE}",
+        koin_test                    : "io.insert-koin:koin-test:${versions.KOIN.TEST}",
+        koin_android                 : "io.insert-koin:koin-android:${versions.KOIN.ANDROID}",
+
+        hilt_core                    : "com.google.dagger:hilt-android:${versions.HILT.HILT}",
+        hilt_kapt                    : "com.google.dagger:hilt-android-compiler:${versions.HILT.HILT}",
+
+        squareup_retrofit            : "com.squareup.retrofit2:retrofit:${versions.SQUAREUP.RETROFIT}",
+        squareup_convertor_gson      : "com.squareup.retrofit2:converter-gson:${versions.SQUAREUP.CONVERTER_GSON}",
+        squareup_logging             : "com.squareup.okhttp3:logging-interceptor:${versions.SQUAREUP.INTERCEPTOR}",
+
+        inject                       : "javax.inject:javax.inject:${versions.JAVAX_INJECT}",
+
+        test_core                    : "androidx.test:core:${versions.ANDROIDX.TEST_CORE}",
+        test_arch_core               : "androidx.arch.core:core-testing:${versions.ANDROIDX.ARCH_CORE}",
+        test_roboelectric            : "org.robolectric:robolectric:${versions.ROBOELECTRIC}",
+        test_mockk                   : "io.mockk:mockk:${versions.MOCKK}",
+        test_turbine                 : "app.cash.turbine:turbine:${versions.TURBINE}",
+        test_junit                   : "junit:junit:${versions.JUNIT}",
+
+        android_test_ext_junit       : "androidx.test.ext:junit:${versions.EXT_JUNIT}",
+        android_test_espresso_core   : "androidx.test.espresso:espresso-core:${versions.ESPRESSO_CORE}",
+]
+ext.deps = deps
+
+def gradleDeps = [
+        SAFE_ARGS  : "androidx.navigation:navigation-safe-args-gradle-plugin:${versions.GRADLE_DEPS.NAVIGATION_ARGS}",
+        OSS        : "com.google.android.gms:oss-licenses-plugin:${versions.GRADLE_DEPS.OSS}",
+        HILT_DAGGER: "com.google.dagger:hilt-android-gradle-plugin:${versions.HILT.HILT}"
+]
+ext.gradleDeps = gradleDeps
+
+def addRepos(RepositoryHandler handler) {
+    handler.google()
+    handler.jcenter()
+    handler.mavenCentral()
+    handler.gradlePluginPortal()
+    handler.maven { url 'https://jitpack.io' }
+}
+
+ext.addRepos = this.&addRepos
+
+def apiJetbrains(DependencyHandler handler) {
+    handler.add("implementation", deps.jetbrains_kotlin_stdlib)
+    handler.add("implementation", deps.jetbrains_coroutines)
+    handler.add("implementation", deps.jetbrains_coil)
+}
+
+ext.apiJetbrains = this.&apiJetbrains
+
+def apiAndroidx(DependencyHandler handler) {
+    handler.add("implementation", deps.androidx_core_ktx)
+    handler.add("implementation", deps.androidx_appcompat)
+    handler.add("implementation", deps.androidx_constraintlayout)
+    handler.add("implementation", deps.androidx_recyclerview)
+    handler.add("implementation", deps.androidx_swiperefreshlayout)
+    handler.add("implementation", deps.androidx_fragment)
+    handler.add("implementation", deps.androidx_nav_fragment)
+    handler.add("implementation", deps.androidx_nav_ui)
+    handler.add("implementation", deps.inject)
+    handler.add("implementation", deps.androidx_work_runtime)
+    handler.add("implementation", deps.androidx_work_runtime_ktx)
+}
+
+ext.apiAndroidx = this.&apiAndroidx
+
+def apiLifecycle(DependencyHandler handler) {
+    handler.add("implementation", deps.androidx_lifecycle_extensions)
+    handler.add("implementation", deps.androidx_lifecycle_viewmodel)
+    handler.add("implementation", deps.androidx_lifecycle_process)
+    handler.add("implementation", deps.androidx_lifecycle_service)
+}
+
+ext.apiLifecycle = this.&apiLifecycle
+
+def apiGoogle(DependencyHandler handler) {
+    handler.add("implementation", deps.google_material)
+    handler.add("implementation", deps.google_oss)
+    handler.add("implementation", deps.google_gson)
+    handler.add("implementation", deps.google_browser)
+    handler.add("implementation", deps.google_guava)
+    handler.add("implementation", deps.google_browser_helper)
+    handler.add("implementation", deps.google_glide)
+    handler.add("implementation", deps.google_glide_okhttp)
+    handler.add("kapt", deps.google_glide_compiler)
+    handler.add("implementation", deps.google_guava)
+}
+
+ext.apiGoogle = this.&apiGoogle
+
+def apiGithub(DependencyHandler handler) {
+    //handler.add("implementation", deps.github_animatedbottombar)
+    handler.add("implementation", deps.github_timber)
+    handler.add("implementation", deps.facebook_shimmer)
+    handler.add("implementation", deps.airbnb_lottie)
+    handler.add("implementation", deps.koin_core)
+    handler.add("implementation", deps.koin_android)
+    handler.add("implementation", deps.squareup_retrofit)
+    handler.add("implementation", deps.squareup_convertor_gson)
+    handler.add("implementation", deps.squareup_logging)
+    handler.add("implementation", deps.room_runtime)
+    handler.add("kapt", deps.room_compiler)
+    handler.add("implementation", deps.room_ktx)
+}
+
+ext.apiGithub = this.&apiGithub
+
+def apiAndroidTest(DependencyHandler handler) {
+    handler.add("androidTestImplementation", deps.android_test_ext_junit)
+    handler.add("androidTestImplementation", deps.android_test_espresso_core)
+}
+
+ext.apiAndroidTest = this.&apiAndroidTest
+
+def apiTest(DependencyHandler handler) {
+    handler.add("testImplementation", deps.google_test_truth)
+    handler.add("testImplementation", deps.test_core)
+    handler.add("testImplementation", deps.test_arch_core)
+    handler.add("testImplementation", deps.test_roboelectric)
+    handler.add("testImplementation", deps.test_mockk)
+    handler.add("testImplementation", deps.test_turbine)
+    handler.add("testImplementation", deps.test_junit)
+    handler.add("testImplementation", deps.google_test_truth)
+    handler.add("testImplementation", deps.koin_test)
+}
+
+ext.apiTest = this.&apiTest
+

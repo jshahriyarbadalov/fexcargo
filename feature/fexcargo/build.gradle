@@ -1,0 +1,80 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    namespace 'az.fex.fexcargo'
+    compileSdk versions.COMPILE_ANDROID_SDK
+
+    defaultConfig {
+        minSdk versions.MIN_ANDROID_SDK
+        targetSdk versions.TARGET_ANDROID_SDK
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    sourceSets{
+        main{
+            java.srcDirs = ['src/main/kotlin']
+        }
+        test{
+            java.srcDirs = ['src/test/kotlin']
+        }
+        androidTest{
+            java.srcDirs = ['src/androidTest/kotlin']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues = true
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    kapt {
+        useBuildCache = true
+    }
+}
+
+dependencies {
+    apiJetbrains(dependencies)
+    apiAndroidx(dependencies)
+    apiLifecycle(dependencies)
+    apiGoogle(dependencies)
+    apiGithub(dependencies)
+    apiAndroidTest(dependencies)
+    apiTest(dependencies)
+    implementation project(':core')
+    implementation project(':i18n')
+    implementation project(':common')
+
+    implementation deps.airbnb_lottie
+    implementation deps.facebook_shimmer
+    implementation deps.github_timber
+}

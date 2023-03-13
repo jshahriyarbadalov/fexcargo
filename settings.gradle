@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "fexcargo"
+include ':app'
+include ':core'
+include ':i18n'
+include ':fexcargo'
+include ':common'
+
+project(':core').projectDir = new File(rootDir,"library/core")
+project(':i18n').projectDir = new File(rootDir,"library/i18n")
+project(':fexcargo').projectDir = new File(rootDir,"feature/fexcargo")
+project(':common').projectDir = new File(rootDir,"library/common")
+
